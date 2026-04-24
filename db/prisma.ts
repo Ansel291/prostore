@@ -25,7 +25,7 @@ const adapter = new PrismaNeon({
 })
 
 // Extends the PrismaClient with a custom result transformer to convert the price and rating fields to strings.
-export const prisma = new PrismaClient({ adapter }).$extends({
+const prisma = new PrismaClient({ adapter }).$extends({
   result: {
     product: {
       price: {
@@ -41,3 +41,5 @@ export const prisma = new PrismaClient({ adapter }).$extends({
     },
   },
 })
+
+export default prisma
