@@ -4,6 +4,7 @@ import '@/assets/styles/globals.css'
 import { APP_DESCRIPTION, APP_NAME, SERVER_URL } from '@/lib/constants'
 import { ThemeProvider } from 'next-themes'
 import { Thermometer } from 'lucide-react'
+import { Toaster } from '@/components/ui/sonner'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -33,6 +34,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Toaster closeButton richColors />
         </ThemeProvider>
       </body>
     </html>
