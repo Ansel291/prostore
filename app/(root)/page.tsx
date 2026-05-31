@@ -4,6 +4,7 @@ import { getLatestProducts } from '@/lib/actions/product.actions'
 
 const Homepage = async () => {
   const latestProducts = await getLatestProducts()
+  console.log('commit - aaa')
   return (
     <>
       <ProductList
